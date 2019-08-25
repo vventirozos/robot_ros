@@ -1,0 +1,1 @@
+roslaunch raspicam_node camerav2_320x240_10fps.launch
