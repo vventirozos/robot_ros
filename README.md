@@ -8,8 +8,8 @@
 
 Initial commit contains a modified gopigo3 ROS "driver" with different servo interface, some extra publishers,
 and different transformations that can be used easily for slam, see : https://github.com/iot-magi/gopigo3_navigation for more. 
-Also contains a ROS node for coral edge TPU usb accelerator, modified from : https://github.com/jveitchmichaelis/edgetpu_ros for 
-the original node code. Modified node will subscribe to a raspicam compressed image topic taking advantage of the hardware acceleration.
+Also contains a ROS node for coral edge TPU usb accelerator, modified from : https://github.com/jveitchmichaelis/edgetpu_ros
+Modified node will subscribe to a raspicam compressed image topic taking advantage of the hardware acceleration.
 This node will publish messages of type: Detection2DArray in /edgetpu/detections with image data not included. 
 There are some variations of the script like using raw / compressed image messages, publishing with / without including image data.
 (I will probably will change this to dynamic parameters at some point..)
