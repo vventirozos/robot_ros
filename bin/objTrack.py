@@ -26,7 +26,7 @@ class obj_detection:
       self.h = int(data.detections[0].results[0].pose.pose.position.y)
       self.objtrack(self.w,self.h)
     else:
-      print("no person found")
+      pass
 
 # servo tracking function
   def objtrack(self, w, h):
@@ -50,7 +50,7 @@ class obj_detection:
     self.pub_w.publish(self.servo_w_center)
     self.pub_h.publish(self.servo_h_center)
 
-# TPU subscription
+#main detection loop
   def objdetection(self):
     self.tpusub
 
@@ -59,8 +59,8 @@ class obj_detection:
 od = obj_detection()
 od.init_robot()
 print ("Starting..")
-
+rospy.sleep(1.5)
 while not rospy.is_shutdown():
   od.objdetection()
+  rospy.spin()
 
-#print (od.obj_id)
